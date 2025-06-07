@@ -9,6 +9,9 @@
     --transition: 0.3s ease-in-out;
     --font-main: 'Poppins', sans-serif;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   
   * {
     margin: 0;
@@ -23,7 +26,6 @@
     line-height: 1.6;
   }
   
-  /* Header */
   .header {
     background-color: #1f1f1f;
     display: flex;
@@ -39,12 +41,12 @@
     text-shadow: 0 0 10px var(--primary-color);
   }
   
-  /* Navigation */
   .nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
   }
+  
   
   .nav a {
     color: var(--white);
@@ -73,7 +75,6 @@
     width: 100%;
   }
   
-  /* Auth buttons */
   .actions .btn {
     background-color: var(--accent-color);
     border: none;
@@ -90,15 +91,14 @@
     background-color: hotpink;
   }
   
-  /* Social Icons */
   .social-bar {
     text-align: center;
     margin: 20px 0;
   }
   
   .social-bar img {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 40px;
     margin: 0 10px;
     transition: transform var(--transition);
   }
@@ -107,7 +107,6 @@
     transform: scale(1.2);
   }
   
-  /* Marquee */
   marquee {
     font-size: 28px;
     font-weight: 600;
@@ -118,7 +117,6 @@
     border-bottom: 1px solid #333;
   }
   
-  /* Description Section */
   .description p {
     text-align: center;
     padding: 30px 20px;
@@ -127,8 +125,12 @@
     max-width: 900px;
     margin: 0 auto;
   }
+  .description h1{
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
   
-  /* Section Headings */
   .heading {
     text-align: center;
     margin: 40px 0 20px;
@@ -145,7 +147,6 @@
     color: var(--white);
   }
   
-  /* Product Gallery */
   .product-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -162,6 +163,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     transition: transform var(--transition), box-shadow var(--transition);
     text-align: center;
+    cursor: pointer;
   }
   
   .product-card img {
@@ -187,7 +189,6 @@
     transform: scale(1.05);
   }
   
-  /* Responsive Layout */
   @media (max-width: 768px) {
     .header {
       flex-direction: column;
